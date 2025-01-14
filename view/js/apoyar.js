@@ -60,31 +60,37 @@ document.getElementById('cantidadPersonalizada').addEventListener('input', funct
 });
 
 // Incluir el SDK de PayPal
+
+// Cargar el SDK de PayPal con componentes de Apple Pay
 paypal.Buttons({
-    createOrder: function (data, actions) {
+    createOrder: function(data, actions) {
         return actions.order.create({
             purchase_units: [{
                 amount: {
-                    value: getCantidadSeleccionada().toString()
+                    value: getCantidadSeleccionada().toString() // Usa la cantidad seleccionada
                 }
             }]
         });
     },
-    onApprove: function (data, actions) {
-        return actions.order.capture().then(function (details) {
+    onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
             // Lógica después de un pago exitoso
-            // Llama a la función para procesar la donación y pasa los datos a la página de éxito
             procesarDonacion();
         });
     },
-    // Configura las credenciales aquí
-    // Puedes obtener estas credenciales desde el panel de desarrolladores de PayPal
-    // No compartas estas credenciales en el código fuente público
     client: {
-        sandbox: 'AT-FpvT_iWqLPgQBMCU_L-ohOjzVPtVL3QV-gZCb2RI1Wc3SimIF5hiw8bncw9s9HnvVAM92BLnUM973',
-        // production: 'AUP12vPigK8ANBi187po0u3M2mQreUtlRK83g91lUd58WGwLVvnU1MSTcHEC6gAes_nsCVyPZtT3STIG'    Reemplaza con tu Client ID de producción cuando estés listo para lanzar
+        sandbox: 'AT-FpvT_iWqLPgQBMCU_L-ohOjzVPtVL3QV-gZCb2RI1Wc3SimIF5hiw8bncw9s9HnvVAM92BLnUM973',  // Client ID de sandbox (modo de prueba)
+        // production: 'tu-client-id-aqui'  // Descomenta y reemplaza con tu client ID de producción cuando sea necesario
+    },
+    components: ['buttons', 'applepay'],  // Incluir el componente de Apple Pay
+    applePay: {
+        enabled: true,  // Habilitar Apple Pay
+        merchantCapabilities: ['supports3DS', 'supportsDebit', 'supportsCredit'],  // Capacidades requeridas por Apple Pay
+        countryCode: 'US',  // Código de país (modificar si es necesario)
+        currencyCode: 'USD', // Moneda en la que se realizará el pago
     }
-}).render('#paypal-button-container');
+}).render('#paypal-button-container'); // Renderizar el botón de PayPal en el contenedor con id 'paypal-button-container'
+
 
 function procesarDonacion() {
 
