@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     emailjs.init({
         publicKey: "6hyWYVyeV1RABuFLB",
     });
+    $('.button-contactame').on('click', function () {
+        $('html, body').animate({
+            scrollTop: $(".white-section").offset().top
+        }, 1000);
+    });
 });
 
 // Validar formato del correo electrónico
