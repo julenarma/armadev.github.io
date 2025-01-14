@@ -140,34 +140,162 @@ textarea {
 
 /*Seccion de donaciones*/
 
-.carrusel-title {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    line-height: 45px;
-    font-size: 24px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    width: 50% !important;
-    margin-bottom: 0 !important;
-    margin-bottom: 3% !important;
-    float: none !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+/* Carrusel con fondo blanco, bordes redondeados y sombra sutil */
+/* Carrusel */
+.carrusel {
+    background-color: #ffffff !important; /* Fondo blanco para un contraste limpio */
+    padding: 40px 30px; /* Espaciado ajustado para no sobrecargar */
+    margin: 60px auto; /* Separación moderada alrededor */
+    border-radius: 15px; /* Bordes redondeados para suavizar */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra elegante y suave */
+    max-width: 1200px; /* Ancho máximo más ajustado */
     text-align: center;
-    color: black;
-    margin-top: 3% !important;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transición suave */
 }
 
-.linea {
-    border-bottom: solid 7px rgb(235, 52, 52);
-    margin: 1em auto;
-    width: 100px;
+/* Efecto al pasar el ratón */
+.carrusel:hover {
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18); /* Sombra más pronunciada */
+    transform: translateY(-8px); /* Desplazamiento suave */
 }
+
+/* Título del carrusel */
+.carrusel-title {
+    font-family: 'Montserrat', sans-serif; /* Elegante y moderna */
+    font-size: 30px; /* Ajustado para mayor equilibrio */
+    font-weight: 800; /* Mantiene la presencia pero de forma contenida */
+    color: #2c3e50; /* Contraste fuerte para mejorar la legibilidad */
+    text-transform: uppercase; /* Mayúsculas para un toque sofisticado */
+    margin-bottom: 30px; /* Espacio adecuado con el contenido */
+    letter-spacing: 3px; /* Espaciado entre letras ajustado */
+    line-height: 1.5; /* Mejor espaciado entre líneas */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15); /* Sombra sutil para mayor contraste */
+}
+
+/* Carrusel responsive y centrado */
+.owl-carousel {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Alineación vertical */
+    flex-wrap: wrap;
+}
+
+/* Item del carrusel */
+.owl-item {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Tarjeta de donación */
+.carousel-card {
+    background-color: #ffffff; /* Fondo limpio */
+    border-radius: 15px; /* Bordes redondeados moderados */
+    padding: 30px; /* Espaciado equilibrado */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave en hover */
+    cursor: pointer; /* Cambio de cursor para interactividad */
+}
+
+/* Efecto de hover para la tarjeta */
+.carousel-card:hover {
+    transform: translateY(-10px); /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
+}
+
+/* Nombre de la donación */
+.donacion-nombre {
+    font-size: 20px; /* Ajustado para mantener un tamaño moderado */
+    font-weight: 800; /* Negrita para destacar el nombre */
+    color: #1e2a3a !important; /* Tono oscuro elegante */
+    margin-bottom: 20px; /* Separación adecuada */
+    text-transform: capitalize; /* Capitalización para mayor distinción */
+    letter-spacing: 0.8px; /* Espaciado entre letras */
+}
+
+/* Mensaje de la donación */
+.donacion-mensaje {
+    font-size: 16px; /* Tamaño moderado para el mensaje */
+    color: #7f8c8d !important; /* Gris suave para el mensaje */
+    margin-bottom: 20px; /* Separación adecuada entre elementos */
+    font-style: italic; /* Cursiva para distinción */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+/* Cantidad donada */
+
+.donacion-cantidad {
+    font-size: 20px; /* Tamaño moderado para la cantidad donada */
+    font-weight: 800; /* Negrita y prominente */
+    color: #3498db; /* Azul premium para el número */
+}
+
+/* Resaltar la cantidad donada */
+.cantidad-highlight {
+    font-weight: 900; /* Resaltado máximo */
+    color: #27ae60 !important; /* Azul oscuro o más sofisticado para el número */
+}
+
+
+
+/* Puntos de navegación */
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo de los puntos de navegación */
+.owl-dot {
+    display: inline-block;
+    width: 16px; /* Puntos de tamaño moderado */
+    height: 16px;
+    margin: 8px;
+    background: #bdc3c7; /* Puntos inactivos con gris suave */
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Estilo de los puntos activos */
+.owl-dot.active {
+    background: #3498db; /* Azul vibrante para puntos activos */
+    transform: scale(1.2); /* Aumento moderado del tamaño */
+}
+
+/* Efecto de hover en puntos */
+.owl-dot:hover {
+    background: #3498db; /* Azul brillante al pasar el ratón */
+    transform: scale(1.3); /* Escala mayor para dar un efecto dinámico */
+}
+
+/* Puntos con animación */
+.owl-dot:focus {
+    outline: none; /* Eliminar el borde en el foco */
+}
+
+/* Donación card - Estilo ultra exclusivo */
+.donation-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 35px;
+    background: #ffffff; /* Fondo limpio y brillante */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12); /* Sombra más profunda */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efectos suaves en hover */
+    cursor: pointer; /* Cambio de cursor para interactividad */
+}
+
+/* Efecto de hover para las tarjetas de donación */
+.donation-card:hover {
+    transform: translateY(-10px); /* Efecto de desplazamiento elegante */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18); /* Sombra más profunda */
+}
+
 
 /*Modo oscuro (Botones numeros form)*/
 
-
-/* Estilos para el modo oscuro */
+/* Estilos para opciones de donación en modo oscuro */
 body.dark-mode .opcion {
     color: white; /* Color del texto en modo oscuro */
     background-color: black; /* Fondo en modo oscuro */
@@ -179,6 +307,123 @@ body.dark-mode .opcion:hover {
     color: black; /* Color del texto al pasar el ratón en modo oscuro */
 }
 
+/* Carrusel en modo oscuro */
+body.dark-mode .carrusel {
+    background-color: #2c3e50 !important; /* Fondo oscuro para el carrusel */
+    padding: 40px 30px;
+    margin: 60px auto;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+    max-width: 1200px;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Efecto de hover para el carrusel en modo oscuro */
+body.dark-mode .carrusel:hover {
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.6);
+    transform: translateY(-8px);
+}
+
+/* Título del carrusel en modo oscuro */
+body.dark-mode .carrusel-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: #ecf0f1; /* Color claro para el texto */
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); /* Sombra más pronunciada */
+}
+
+/* Tarjeta de donación en modo oscuro */
+body.dark-mode .carousel-card {
+    background-color: #34495e; /* Fondo oscuro para la tarjeta */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto de hover para la tarjeta en modo oscuro */
+body.dark-mode .carousel-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
+}
+
+/* Nombre de la donación en modo oscuro */
+body.dark-mode .donacion-nombre {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ecf0f1; /* Texto blanco en modo oscuro */
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    letter-spacing: 0.8px;
+}
+
+/* Mensaje de la donación en modo oscuro */
+body.dark-mode .donacion-mensaje {
+    font-size: 16px;
+    color: #bdc3c7; /* Gris claro para el mensaje */
+    margin-bottom: 20px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* Cantidad donada en modo oscuro */
+body.dark-mode .donacion-cantidad {
+    font-size: 20px;
+    font-weight: 800;
+    color: #3498db !important; /* Azul brillante para la cantidad */
+}
+
+/* Resaltar la cantidad donada en modo oscuro */
+body.dark-mode .cantidad-highlight {
+    font-weight: 900;
+    color: #27ae60 !important; /* Verde brillante para la cantidad */
+}
+
+/* Puntos de navegación en modo oscuro */
+body.dark-mode .owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo de los puntos de navegación en modo oscuro */
+body.dark-mode .owl-dot {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 8px;
+    background: #7f8c8d; /* Puntos inactivos en gris claro */
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+/* Donación card - Estilo ultra exclusivo en modo oscuro */
+body.dark-mode .donation-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 35px;
+    background: #2c3e50; /* Fondo oscuro para la tarjeta */
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Sombra más profunda */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto de hover para las tarjetas de donación en modo oscuro */
+body.dark-mode .donation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5); /* Sombra más profunda */
+}
 
 @media (max-width: 768px) {
     .donacion {
