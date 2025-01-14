@@ -1,0 +1,665 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-style: 'Open Sans', sans-serif;
+    color: #626262;
+    font-size: 13px;
+}
+
+/*imagen header*/
+
+.img-header {
+    position: relative;
+    width: 100% !important;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.img-header video {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    /* Ancho del video al 100% de la pantalla */
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-header .header-info,
+.header-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    align-items: center;
+    z-index: 100;
+}
+
+.img-header .header-info h2 {
+    color: white;
+    font-size: 45px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.blue-box {
+    background-color: #087ec4 !important;
+    display: inline-block;
+    padding: 30px;
+}
+
+.img-header .header-info p {
+    color: white;
+    font-size: 15px;
+    width: 70%;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.mini-button {
+    background-color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    color: black;
+    border-radius: 2px;
+    font-size: 17px;
+    padding: 0px 8px;
+    bottom: 10%;
+    position: absolute;
+}
+
+.mini-button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilo para la sección en blanco */
+.white-section {
+    background-color: #ffffff;
+    /* Color de fondo blanco */
+    position: relative;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Estilo para el título */
+.white-section h2 {
+    font-weight: 700;
+    line-height: 45px;
+    font-size: 36px;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    width: 50% !important;
+    margin-bottom: 0 !important;
+    margin-top: 4% !important;
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+    color: black;
+
+}
+
+/* Estilo para el texto */
+.white-section p {
+    line-height: 26px;
+    font-size: 14px;
+    width: 50% !important;
+    margin-bottom: 0 !important;
+    margin-top: 4% !important;
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    clear: both;
+    text-align: center;
+
+
+}
+
+/*Botón contáctame index*/
+.button-contactame {
+    background: none;
+    border: solid 2px black;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    outline: none;
+    padding: 2px 14px !important;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    line-height: 55px !important;
+    font-weight: 600;
+}
+
+/*Texto interested index*/
+.interested {
+    margin-bottom: 2% !important;
+    font-size: 14px;
+
+}
+
+.button-contactame:hover {
+    background: black;
+    color: white;
+}
+
+/*Sección sobre mi index comienzo*/
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Dos columnas de tamaño igual */
+    font-size: 15px;
+    margin-top: 5% !important;
+
+}
+
+.item1 {
+    grid-column: span 2;
+    /* Este item ocupa las dos columnas */
+}
+
+.item2,
+.item3 {
+    /* Ambos items ocupan la mitad del ancho en la misma línea */
+    grid-column: span 1;
+
+}
+
+.item4,
+.item5 {
+    /* Ambos items ocupan la mitad del ancho en la misma línea */
+    grid-column: span 1;
+}
+
+.blue-box1 {
+    background-color: #087ec4;
+    color: white;
+    padding-top: 3% !important;
+    padding-bottom: 3% !important;
+    font-size: 11px;
+    text-align: center;
+    line-height: 15px;
+    font-weight: 600 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase;
+    margin-bottom: -8px !important;
+}
+
+
+.photo1-about-me,
+.photo2-about-me {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.text-about-me h3 {
+    font-size: 24px;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 20px;
+
+
+}
+
+.title-about-me p,
+.text-about-me p {
+    padding: 20px;
+
+}
+
+
+
+/*My stats section*/
+
+.my-stats {
+    margin-top: 5% !important;
+
+}
+
+.my-stats-image {
+    background: url(../img/index/projects.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    background-position: center;
+    margin-top: 5em;
+    /* Ajusta esto según tus necesidades */
+
+}
+
+.number-container {
+    font-size: 48px !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease;
+    display: flex;
+    flex-direction: row;
+    /* Mantenido flex-direction: row */
+    justify-content: center;
+    align-items: center;
+    /* Añadido para centrar verticalmente */
+    color: white;
+    width: 100%;
+}
+
+.number-container span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Añadido para centrar horizontalmente */
+    margin: 0 20px;
+    /* Ajusta el espaciado entre cada ícono y número */
+}
+
+.number-container #projects,
+.number-container #clock,
+.number-container #briefcase,
+.number-container #certificate {
+    font-size: 36px;
+    /* Ajusta el tamaño de la fuente de los números */
+    margin-top: 10px;
+    /* Ajusta el espaciado entre el ícono y el texto */
+}
+
+.interested {
+    font-size: 14px;
+    /* Ajusta el tamaño de la fuente del texto */
+    margin-top: 5px;
+    /* Ajusta el espaciado entre el número y el texto */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+}
+
+/*Sección my stats fin*/
+
+/* Estilo para la sección2 en blanco */
+.white-section2 {
+    background-color: #ffffff;
+    /* Color de fondo blanco */
+    position: relative;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10% !important;
+    text-align: center;
+
+}
+
+.white-section2 .section-title {
+    font-size: 24px;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.white-section2 .section-text {
+    width: 50% !important;
+    margin-bottom: 0 !important;
+    margin-top: 2% !important;
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    color: #7f7f7f;
+
+}
+
+/*Mini nav seccion2*/
+#navbar-seccion2 {
+    position: relative;
+    width: 100%;
+    top: 5% !important;
+    text-transform: uppercase;
+    justify-content: center;
+
+}
+
+.nav2-principal {
+    z-index: 0;
+    width: 100%;
+    top: 5% !important;
+    text-transform: uppercase;
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    padding: 3em;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.nav2-principal li {
+    margin: 0 20px;
+}
+
+.nav2-principal li a {
+    color: black;
+    text-decoration: none;
+    padding-bottom: 1em;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+}
+
+.nav2-principal li a.active {
+    border-bottom: 1px solid black;
+}
+
+.nav2-principal a:hover {
+    border-bottom: 1px solid black;
+
+}
+
+/*Section2 white abajo del nav galeria de imágenes*/
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.imagen {
+    position: relative;
+    width: calc(25%);
+    max-height: 150px;
+    /* Ajusta la altura según tus necesidades */
+    margin: 0;
+    box-sizing: border-box;
+    max-width: calc(25%);
+    overflow: hidden;
+
+}
+
+.imagen a {
+    cursor: url('https://mouredev.com/wp-content/themes/h-code/assets/images/icon-zoom-white.png'), auto;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+    /* Transición para suavizar el efecto de zoom */
+}
+
+.imagen:hover img {
+    transform: scale(1.1);
+    /* Hacer zoom en la imagen al hacer hover */
+}
+
+figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.imagen:hover figcaption {
+    opacity: 1;
+}
+
+figcaption h3 {
+    letter-spacing: 4px;
+    font-weight: 400;
+    color: #e3e3e3;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/*Modo oscuro index.html*/
+
+
+/* Subrayados de los enlaces en modo oscuro */
+body.dark-mode .nav2-principal a:hover,
+body.dark-mode .nav2-principal li a.active {
+    border-bottom: 1px solid white;
+    /* Subrayado blanco */
+}
+
+body.dark-mode .mini-button {
+
+    background-color: #1f1f1f;
+}
+
+/*Foto JA final */
+body.dark-mode .ja_final {
+    /*Eso hace que invierta el color del que tiene(en este caso al blanco)*/
+    filter: invert(1);
+}
+
+/* Estilos para secciones con fondo blanco */
+body.dark-mode .white-section,
+body.dark-mode .white-section2 {
+    background-color: #1f1f1f;
+    /* Fondo oscuro */
+    color: #fff;
+    /* Texto blanco */
+}
+
+/* Estilos para imágenes y figcaption */
+body.dark-mode .imagen figcaption h3 {
+    color: #fff;
+    /* Títulos en blanco */
+}
+
+/*TOCA REVISAR */
+@media screen and (max-width: 768px) {
+
+    .img-header video {
+        object-fit: cover;
+        /* Asegúrate de que el video cubra el contenedor */
+        object-position: 40% center;
+        /* Mueve el video un poco a la izquierda */
+    }
+
+    .blue-box {
+        padding: 20px;
+        margin-top: 10% !important;
+    }
+
+    .header-info #parrafo {
+        text-align: left;
+        width: 100% !important;
+        padding: 20px;
+        margin-top: -10% !important;
+    }
+
+    .mini-button {
+        background-color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        color: black;
+        border-radius: 2px;
+        font-size: 17px;
+        padding: 0px 8px;
+        position: absolute;
+    }
+
+    .white-section p {
+        font-size: 14px;
+        width: 100% !important;
+        padding: 30px;
+
+    }
+
+    /* Estilo para el título */
+    .white-section h2 {
+        font-size: 2.5em;
+        width: 100% !important;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Estilo para el texto */
+    .white-section p {
+        line-height: 26px;
+        font-size: 14px;
+        width: 100% !important;
+        margin-top: 4% !important;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .item1,
+    .item2,
+    .item3,
+    .item4,
+    .item5 {
+        grid-column: initial;
+        /* Restablece el ancho de la columna en dispositivos móviles */
+    }
+
+    .blue-box1 {
+        flex-wrap: nowrap;
+        /* Evita que los elementos se envuelvan en modo móvil */
+        justify-content: space-between;
+        /* Distribuye los elementos horizontalmente */
+        padding-top: 3% !important;
+        padding-bottom: 3% !important;
+    }
+
+    .seguridad_informatica {
+        flex-grow: 0;
+        /* Evita que "Seguridad Informática" ocupe todo el espacio disponible */
+        margin-left: 0;
+        /* Elimina el margen izquierdo */
+        margin-top: 10px;
+        /* Agrega margen en la parte superior */
+    }
+
+
+    .text-about-me h3 {
+        text-align: center;
+    }
+
+    .my-stats-image {
+        background: url(../img/index/projects.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        background-blend-mode: soft-light;
+        background-color: rgba(0, 0, 0, 0.6);
+        position: relative;
+        width: 100%;
+        min-height: 150vh !important;
+        /* Altura mínima de 150 vh*/
+        background-position: center;
+
+    }
+
+    .number-container {
+        font-size: 48px !important;
+        transform: translate(-50%, -50%);
+        transition: transform 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        /* Mantenido flex-direction: row */
+        justify-content: center;
+        align-items: center;
+        /* Añadido para centrar verticalmente */
+        color: white;
+        width: 100%;
+
+    }
+
+    .number-container span {
+        margin-top: 10% !important;
+    }
+
+
+    .white-section2 .section-title {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .white-section2 .section-text {
+        width: 100% !important;
+        padding: 20px;
+        text-align: left;
+    }
+
+    /*Galeria*/
+    .galeria {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .imagen {
+        position: relative;
+        width: calc(100%);
+        height: 300px;
+        /* Ajusta la altura según tus necesidades */
+        margin: 0;
+        box-sizing: border-box;
+        max-width: calc(100%);
+
+
+    }
+
+    .imagen img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+
+    }
+
+
+}

@@ -1,0 +1,298 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-style: 'Open Sans', sans-serif;
+    color: #626262;
+    font-size: 13px;
+}
+
+.img-header {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.img-header video {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Ancho del video al 100% de la pantalla */
+    height: 100vh;
+    object-fit: cover;
+}
+
+.img-header .header-info,
+.header-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    align-items: center;
+    z-index: 100;
+}
+
+.header-info h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: 600 !important;
+    letter-spacing: 1px !important;
+    line-height: 41px;
+    text-transform: uppercase;
+}
+
+.header-info p {
+    text-transform: uppercase;
+    color: white;
+    width: 70%;
+    margin: 0 auto;
+    line-height: 24px;
+    font-size: 15px;
+    margin-top: 2% !important;
+    text-align: center !important;
+    letter-spacing: 2px !important;
+}
+
+
+/*nav tecnologías*/
+.nav2-principal {
+    z-index: 0;
+    width: 100%;
+    top: 5% !important;
+    text-transform: uppercase;
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    padding: 3em;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.nav2-principal li {
+    margin: 0 20px;
+}
+
+.nav2-principal li a {
+    color: black;
+    text-decoration: none;
+    padding-bottom: 1em;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.nav2-principal li a.active {
+    border-bottom: 1px solid black;
+}
+
+.nav2-principal a:hover {
+    border-bottom: 1px solid black;
+}
+
+/* Estilo tecnologias */
+.white-section {
+    background-color: #ffffff;
+    /* Color de fondo blanco */
+    position: relative;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10% !important;
+    text-align: center;
+}
+
+.white-section .section-title {
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.white-section .section-text {
+    width: 50% !important;
+    margin-bottom: 0 !important;
+    margin-top: 2% !important;
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    color: #7f7f7f;
+
+}
+
+/*Mini nav tecnologías*/
+.nav-tecnologias {
+    z-index: 0;
+    width: 100%;
+    top: 5% !important;
+    text-transform: uppercase;
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    /* Añadido para permitir que los elementos se envuelvan automáticamente */
+    padding: 3em;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.nav-tecnologias li {
+    margin: 0 20px;
+
+}
+
+.nav-tecnologias li a {
+    color: black;
+    text-decoration: none;
+    padding-bottom: 1em;
+    font-weight: 600;
+    font-size: 11px;
+    flex-wrap: wrap;
+    letter-spacing: 1px;
+    cursor: pointer;
+    white-space: nowrap;
+
+}
+
+.nav-tecnologias li a.active {
+    border-bottom: 1px solid black;
+}
+
+.nav-tecnologias a:hover {
+    border-bottom: 1px solid black;
+
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.imagen {
+    position: relative;
+    width: calc(33.333%);
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    margin: 0;
+    box-sizing: border-box;
+    max-width: calc(33.333%);
+    overflow: hidden;
+}
+
+.imagen a {
+    cursor: url('https://mouredev.com/wp-content/themes/h-code/assets/images/icon-zoom-white.png'), auto;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.imagen:hover img {
+    transform: scale(1.1);
+}
+
+figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* No interactuable por defecto */
+}
+
+.imagen:hover figcaption {
+    opacity: 1; /* Aparecer en hover */
+    background: rgba(0, 0, 0, 0.8); /* Ajusta la opacidad si es necesario */
+}
+
+figcaption h3 {
+    letter-spacing: 4px;
+    font-weight: 400;
+    color: #e3e3e3; /* Color claro en modo claro */
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/* Modo oscuro */
+
+body.dark-mode .white-section {
+    background-color: #1f1f1f; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+}
+
+body.dark-mode .nav-tecnologias a:hover,
+body.dark-mode .nav-tecnologias li a.active {
+    border-bottom: 1px solid white; /* Subrayado blanco */
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav-tecnologias li {
+        margin-top: 15px;
+        /* Aumenta el margen superior en dispositivos móviles */
+    }
+
+    /*Abajo del nav tecnoloías galeria de imágenes*/
+    .galeria {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .imagen {
+        position: relative;
+        width: calc(100%);
+        /* Ajuste para mostrar 3 imágenes por fila */
+        height: 300px;
+        box-sizing: border-box;
+        max-width: calc(100%);
+        /* Ajuste para mostrar 3 imágenes por fila */
+
+    }
+
+    .imagen a {
+        cursor: url('https://mouredev.com/wp-content/themes/h-code/assets/images/icon-zoom-white.png'), auto;
+    }
+
+
+    .imagen img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        image-rendering: auto;
+    }
+
+
+}

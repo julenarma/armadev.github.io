@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    
+
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-color: black;
+    z-index: 1000;
+    transition: background-color 0.5s ease;
+    display: flex;
+    height: 65px;
+}
+
+.log-box {
+    padding: 22.1px;
+    width: 20%;
+}
+
+.btn-menu {
+
+    display: none;
+}
+
+.nav1-principal {
+    list-style: none;
+    display: flex;
+    padding: 22.1px !important;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    /* Mueve el menú hacia la derecha */
+    color: white;
+
+}
+
+.nav1-principal li {
+    margin: 0 20px;
+}
+
+.nav1-principal li a {
+    color: white;
+    text-decoration: none;
+    padding-bottom: 1em;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+
+
+}
+
+.nav1-principal a:hover {
+    border-bottom: 2px solid white;
+
+
+}
+
+.nav1-principal li a.active {
+    border-bottom: 2px solid white;
+}
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: black;
+
+}
+
+nav.sticky a {
+    color: white;
+    padding-bottom: 1em;
+
+}
+
+nav.sticky a.active {
+    border-bottom: 2px solid black;
+}
+
+
+nav.sticky a:hover {
+
+    border-bottom: 2px solid black;
+
+}
+
+/*Go top*/
+.go-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 94%;
+    z-index: 2000;
+    border: none;
+    outline: none;
+    background-color: lightgrey;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 35px;
+    height: 50px;
+    width: 50px;
+}
+
+.go-top:hover {
+    background-color: white;
+
+}
+
+.go-top:focus {
+
+    border: none;
+    outline: none;
+}
+
+
+.container-title {
+    margin-top: 100px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+h1 {
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #333;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    color: #fff;
+    text-decoration: none;
+
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    outline: none;
+    text-decoration: none;
+    opacity: 0.5;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    /*Navegation Menu*/
+
+    .btn-menu {
+
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .nav1-principal {
+        position: absolute;
+        top: 50px;
+        left: -120%;
+        width: 93%;
+        height: calc(100vh - 65px);
+        background: white;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: left 0.3s ease;
+        /* Added transition property for smooth animation */
+    }
+
+
+    /*Cada botón, una escalera más arriba del enlace, aquí pondremos los margenes entre los botones*/
+    .nav1-principal li {
+
+        margin: 8px 0px;
+    }
+
+    .nav1-principal li a {
+
+        font-size: 20px;
+        color: black;
+    }
+
+    .nav1-principal li a.active {
+        background: none;
+        color: #087ec4 !important;
+        border-bottom: none;
+    }
+
+    .nav1-principal li a:hover {
+        background: none;
+        color: #087ec4 !important;
+        border-bottom: none;
+    }
+
+    .go-top {
+        left: 84%;
+    }
+
+}

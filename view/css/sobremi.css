@@ -1,0 +1,312 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-style: 'Open Sans', sans-serif;
+    color: #626262;
+    font-size: 13px;
+}
+
+/*video header*/
+
+.img-header {
+    position: relative;
+    width: 100% !important;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.img-header video {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    /* Ancho del video al 100% de la pantalla */
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-header .header-info,
+.header-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    align-items: center;
+    z-index: 100;
+}
+
+.header-info h2 {
+    color: white;
+    font-size: 28px !important;
+    font-weight: 600 !important;
+    letter-spacing: 1px !important;
+    line-height: 41px !important;
+    text-transform: uppercase;
+}
+
+.header-info p {
+    text-transform: uppercase;
+    color: white;
+    width: 70%;
+    margin: 0 auto;
+    line-height: 24px;
+    font-size: 15px;
+    margin-top: 2% !important;
+    text-align: center !important;
+    letter-spacing: 2px !important;
+}
+
+
+/*Botón contáctame contacto*/
+.button-sobremi {
+
+    background: none;
+    border: solid 2px white;
+    color: white !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    outline: none;
+    padding: 10px 22px !important;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    margin-top: 6% !important;
+    font-weight: 600;
+    letter-spacing: 3px;
+    outline: none;
+    text-decoration: none;
+}
+
+
+.button-sobremi:hover {
+    background: white;
+    color: black !important;
+    outline: none;
+    text-decoration: none;
+}
+
+
+
+/*SOBRE MI SECTION*/
+
+.about-section {
+    margin-top: 5%;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    margin: 60px 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s ease;
+    text-decoration: underline;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.profile-photo {
+    width: 160px;
+    /* Cambia el ancho */
+    height: 160px;
+    /* Igualar el alto */
+    border-radius: 50%;
+    margin-right: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bio {
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li strong {
+    color: #2980b9;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.about-content p {
+    line-height: 1.6;
+}
+
+.accordion {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2em;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.accordion-icon {
+    margin-right: 10px;
+    transition: transform 0.2s;
+}
+
+.accordion.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion:hover {
+    background-color: #1e6a92;
+}
+
+/*GRAFICO ARAÑA HABILIADES */
+#skillsChart {
+    width: 100%;
+    height: 500px !important;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: #2c3e50;
+    display: flex;
+   
+}
+
+/*GRAFICO ARAÑA HABILIADES */
+#experienceChart,
+#educationChart {
+    height: 500px !important;
+    display: flex;
+    width: 100%;
+}
+
+/*TEXTOS EDUCACION Y EXPERIENCIA */
+.experience-list, .education-list, .languages-list, .interest-list, .licenses-list {
+    background: #2c3e50;
+    /* Color de fondo */
+    border-radius: 10px;
+    /* Esquinas redondeadas */
+    padding: 20px;
+    /* Espaciado interno */
+    margin-top: 20px;
+    /* Espaciado superior */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra */
+    color: white;
+    /* Color del texto */
+}
+
+/*SOBRE MI SECTION END*/
+
+
+/*imagen header*/
+.img-header .header-info,
+.header-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    align-items: center;
+    z-index: 100;
+}
+
+.img-header .header-info h2 {
+    color: white;
+    font-size: 45px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+
+/*Botón contáctame index*/
+.apoyar {
+    background: none;
+    border: solid 2px black;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    outline: none;
+    padding: 2px 64px !important;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    line-height: 55px !important;
+    font-weight: 600;
+    margin-top: 5% !important;
+    text-decoration: none;
+}
+
+.apoyar:hover {
+    background: black !important;
+    color: white;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #experienceContainer,
+    #educationContainer {
+        display: none !important;
+    }
+
+}

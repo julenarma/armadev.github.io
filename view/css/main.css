@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-color: transparent;
+    /* Inicialmente transparente */
+    z-index: 1000;
+    transition: background-color 0.5s ease;
+    display: flex;
+    height: 65px;
+}
+
+.log-box {
+    padding: 1.5em;
+    width: 20%;
+
+}
+
+#scrollImage {
+    width: 120px;
+    /* Mantén el tamaño */
+    height: 30px;
+    /* Mantén la altura */
+    margin: 0;
+    /* Asegurarse de que no haya margen */
+    padding: 0;
+    /* Asegurarse de que no haya padding */
+    transition: none;
+    /* Desactivar transiciones de tamaño */
+}
+
+.btn-menu {
+    display: none;
+}
+
+.nav1-principal {
+    list-style: none;
+    display: flex;
+    padding: 1.7em !important;
+    justify-content: flex-end;
+    margin-left: auto;
+    color: white;
+}
+
+.nav1-principal li {
+    margin: 0 20px;
+}
+
+.nav1-principal li a {
+    color: white;
+    text-decoration: none;
+    padding-bottom: 1em;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.nav1-principal a:hover {
+    border-bottom: 2px solid white;
+}
+
+.nav1-principal li a.active {
+    border-bottom: 2px solid white;
+}
+
+nav.sticky {
+    position: fixed;
+    /* Fijo al desplazarse */
+    top: 0;
+    width: 100%;
+    background-color: #1f1f1f;
+    /* Cambiar a gris oscuro o negro */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    /* Cambiar texto a blanco */
+}
+
+nav.sticky a {
+    color: white;
+    /* Enlaces en blanco */
+}
+
+nav.sticky a.active {
+    border-bottom: 2px solid white;
+    /* Activo en blanco */
+}
+
+nav.sticky a:hover {
+    border-bottom: 2px solid white;
+    /* Hover en blanco */
+}
+
+/* Cuando el fondo es blanco (modo claro) */
+nav.sticky.white-background a.active {
+    border-bottom: 2px solid black;
+    /* Activo en negro si el fondo es blanco */
+}
+
+nav.sticky.white-background a:hover {
+    border-bottom: 2px solid black;
+    /* Hover en negro si el fondo es blanco */
+}
+
+
+#dark-mode-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    /* Color inicial */
+    outline: none;
+    font-size: 20px;
+    /* Alineado con el tamaño de los enlaces */
+    margin: 0;
+    /* Sin margen para mantener la alineación */
+    display: flex;
+    /* Para que el icono se alinee correctamente */
+    align-items: center;
+    /* Centrar verticalmente el icono */
+    padding: 0;
+    /* Asegurar que no haya padding extra */
+    line-height: 65px;
+    /* Asegura que el icono esté alineado verticalmente */
+    transition: color 0.3s ease;
+    /* Suaviza el cambio de color */
+}
+
+#dark-mode-toggle:hover {
+    color: #fff;
+    /* Cambia el color al pasar el mouse */
+}
+
+/* Go top */
+.go-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 94%;
+    z-index: 2000;
+    border: none;
+    outline: none;
+    background-color: lightgrey;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 35px;
+    height: 50px;
+    width: 50px;
+}
+
+.go-top:hover {
+    background-color: white;
+}
+
+.go-top:focus {
+    border: none;
+    outline: none;
+}
+
+/* Footer */
+footer {
+    margin-top: 5% !important;
+}
+
+footer h5 {
+    font-size: 11px !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+footer p {
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+footer h6 {
+    font-size: 11px !important;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.enlaces-footer a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-right: 18px;
+    margin-top: 5% !important;
+    font-size: 11px !important;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.enlaces-footer a:hover {
+    opacity: 0.5;
+    transition: 0.3s all;
+    /* Intensifica el color al pasar el ratón sobre él */
+}
+
+.redes-sociales {
+    margin-top: 1% !important;
+    margin-bottom: 1% !important;
+}
+
+.redes-sociales a {
+    margin: 0 10px;
+    /* Ajusta el margen entre los íconos según sea necesario */
+    font-size: 28px;
+}
+
+.redes-sociales a {
+    color: black;
+    /* Color de los íconos de redes sociales */
+}
+
+.redes-sociales a:hover {
+    opacity: 0.5;
+    transition: 0.3s all;
+    /* Intensifica el color al pasar el ratón sobre él */
+}
+
+footer p a {
+    color: #626262;
+    outline: none;
+}
+
+footer p a:hover {
+    color: #626262;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: 0.3s all;
+}
+
+.politica-privacidad:hover {
+    opacity: 0.5;
+    transition: 0.3s all;
+}
+
+
+/*Modo oscuro Main Only (All Navs, gotop...)*/
+
+/* Modo oscuro Background*/
+body.dark-mode {
+    background-color: #1f1f1f;
+    /* Fondo gris oscuro */
+    color: #fff !important;
+    ;
+    /* Texto blanco */
+}
+
+/* Estilo de los enlaces en el navbar */
+body.dark-mode .nav1-principal a {
+    color: #fff;
+    /* Enlaces blancos */
+    text-decoration: none;
+    /* Sin subrayado */
+}
+
+/* Asegurar que todos los textos sean blancos en modo oscuro */
+body.dark-mode * {
+    color: #fff !important;
+    /* Texto blanco para todos los elementos */
+}
+
+
+/* Subrayados de los enlaces en modo oscuro */
+body.dark-mode .nav1-principal a:hover,
+body.dark-mode .nav1-principal li a.active {
+    border-bottom: 2px solid white;
+    /* Subrayado blanco */
+}
+
+/* Cambia el color del botón "volver arriba" */
+body.dark-mode .go-top {
+    background-color: black;
+
+    /* Fondo del botón */
+    color: #fff;
+    /* Color del icono */
+}
+
+body.dark-mode .go-top:hover {
+    background-color: #1f1f1f;
+}
+
+
+/* Otros elementos que pueden necesitar ajuste */
+body.dark-mode footer {
+    background-color: #1f1f1f;
+    /* Fondo oscuro en el footer */
+    color: #fff;
+    /* Texto blanco en el footer */
+}
+
+/* Enlaces en el footer */
+body.dark-mode footer a {
+    color: #fff;
+    /* Enlaces blancos en el footer */
+}
+
+
+/* Todos los formularios de todas las apginas en negro*/
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: black;
+    /* Fondo del input/textarea en modo oscuro */
+    color: white;
+    /* Color del texto en el input/textarea */
+    border: 1px solid white;
+    /* Borde en modo oscuro */
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #aaa;
+    /* Color del placeholder en modo oscuro */
+}
+
+body.dark-mode input:hover,
+body.dark-mode textarea:hover {
+    border-color: #ccc;
+    /* Borde al pasar el ratón */
+}
+
+
+@media only screen and (max-width: 768px) {
+    #navbar {
+
+        background-color: transparent;
+
+    }
+
+    /* Navegation Menu */
+    .btn-menu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        /* Color del icono del menú */
+    }
+
+    .nav1-principal {
+        position: absolute;
+        top: 65px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 65px);
+        background: #f8f8f8;
+        /* Fondo oscuro para modo oscuro */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: left 0.3s ease;
+        /* Transición para suavizar la animación */
+    }
+
+    /* Cada botón, una escalera más arriba del enlace */
+    .nav1-principal li {
+        margin: 8px 0px;
+    }
+
+    .nav1-principal li a {
+        font-size: 20px;
+        text-decoration: none;
+        /* Color de texto en modo oscuro */
+        color: black !important;
+    }
+
+    /* Solo cambia el color de los enlaces del menú cuando el menú está abierto */
+    #dark-mode-toggle {
+        color: black !important;
+        /* Color de los enlaces del menú en modo claro */
+    }
+
+    .nav1-principal li a.active {
+        background: none;
+        color: #087ec4 !important;
+        /* Color activo en modo oscuro */
+        border-bottom: none !important;
+    }
+
+    .nav1-principal li a:hover {
+        background: none;
+        color: #087ec4 !important;
+        /* Color en hover en modo oscuro */
+        border-bottom: none !important;
+    }
+
+    /* Menu modo oscuro moviles*/
+
+    .go-top {
+        left: 84%;
+    }
+
+    /* Menu modo oscuro moviles*/
+    /* Estilos del menú en modo oscuro */
+
+
+    body.dark-mode .nav1-principal {
+        position: absolute;
+        top: 65px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 65px);
+        background: #1f1f1f;
+        /* Fondo oscuro para modo oscuro */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: left 0.3s ease;
+        /* Transición para suavizar la animación */
+    }
+
+    body.dark-mode .nav1-principal li a {
+        color: #fff !important;
+        /* Enlaces blancos */
+        text-decoration: none;
+        /* Sin subrayado */
+    }
+
+
+    /* Estilos del menú en modo oscuro */
+    body.dark-mode .nav1-principal li a.active {
+        color: #087ec4 !important;
+        /* Color activo en modo oscuro */
+        border-bottom: none !important;
+       
+    }
+
+    /* También asegúrate de que no haya subrayado en hover */
+    body.dark-mode .nav1-principal li a:hover {
+        color: #087ec4 !important;
+        /* Color en hover */
+        border-bottom: none;
+        /* Sin subrayado al pasar el ratón */
+    }
+}
