@@ -3,12 +3,18 @@ document.addEventListener("DOMContentLoaded", function () {
     emailjs.init({
         publicKey: "6hyWYVyeV1RABuFLB",
     });
+
+    // Scroll hacia la sección de contacto
     $('.button-contactame').on('click', function () {
         $('html, body').animate({
             scrollTop: $(".white-section").offset().top
         }, 1000);
     });
 });
+
+// Variable para verificar si ya se envió un mensaje
+var mensajeEnviado = false;
+var tiempoRestante = 30; // Tiempo de espera en segundos
 
 // Validar formato del correo electrónico
 function esCorreoValido(correo) {
@@ -17,10 +23,6 @@ function esCorreoValido(correo) {
 }
 
 function enviarContactoForm() {
-    var botonEnviar = $("#botonContactoEnviar");
-    botonEnviar.prop("disabled", true);
-    botonEnviar.text("Enviando...");
-
     // Obtener valores de los campos
     var nombre = $("#nombreContacto").val();
     var email = $("#emailContacto").val();
@@ -38,8 +40,6 @@ function enviarContactoForm() {
             iconColor: '#ffc107',  // Color del ícono de advertencia (amarillo)
             confirmButtonColor: '#007bff', // Color del botón (azul)
         });
-        botonEnviar.prop("disabled", false);
-        botonEnviar.text("Enviar mensaje");
         return;
     }
 
@@ -53,12 +53,28 @@ function enviarContactoForm() {
             iconColor: '#dc3545',  // Color del ícono de error (rojo)
             confirmButtonColor: '#007bff', // Color del botón (azul)
         });
-        botonEnviar.prop("disabled", false);
-        botonEnviar.text("Enviar mensaje");
         return;
     }
 
-    // Datos a enviar a MySQL y EmailJS
+    // Si ya se ha enviado un mensaje y los campos son válidos, mostrar el mensaje de advertencia
+    if (mensajeEnviado) {
+        Swal.fire({
+            icon: 'info',
+            title: 'Mensaje ya enviado',
+            text: 'Tu mensaje ya ha sido enviado. Por favor, espera unos minutos antes de intentar nuevamente. Gracias por ponerte en contacto, pronto recibirás una respuesta.',
+            background: '#343a40',  // Fondo oscuro
+            color: '#f8f9fa',  // Texto claro
+            iconColor: '#17a2b8',  // Color del ícono de información (azul)
+            confirmButtonColor: '#007bff', // Color del botón (azul)
+        });
+        return;
+    }
+
+    var botonEnviar = $("#botonContactoEnviar");
+    botonEnviar.prop("disabled", true);
+    botonEnviar.text("Enviando...");
+
+    // Datos a enviar
     var data = {
         nombre: nombre,
         email: email,
@@ -66,7 +82,7 @@ function enviarContactoForm() {
         mensaje: mensaje,
     };
 
-    // Ahora solo enviar el correo con EmailJS
+    // Enviar mensaje usando EmailJS
     enviarEmailJS(data, botonEnviar);
 }
 
@@ -83,6 +99,10 @@ function enviarEmailJS(data, botonEnviar) {
     })
     .then((response) => {
         console.log("Correo enviado con éxito:", response.status, response.text);
+
+        // Cambiar la variable a true para indicar que el mensaje ya fue enviado
+        mensajeEnviado = true;
+
         Swal.fire({
             icon: 'success',
             title: '¡Mensaje enviado!',
@@ -92,13 +112,21 @@ function enviarEmailJS(data, botonEnviar) {
             iconColor: '#28a745',  // Color del ícono de éxito (verde)
             confirmButtonColor: '#007bff', // Color del botón (azul)
         });
+
+        // Limpiar los campos del formulario
         $("#nombreContacto").val("");
         $("#emailContacto").val("");
         $("#asuntoContacto").val("");
         $("#mensajeContacto").val("");
 
+        // Volver a habilitar el botón
         botonEnviar.prop("disabled", false);
         botonEnviar.text("Enviar mensaje");
+
+        // Iniciar el temporizador de 30 segundos
+        setTimeout(function () {
+            mensajeEnviado = false; // Restablecer el estado
+        }, 180000); // 1 minuto (60000 milisegundos)
     })
     .catch((error) => {
         console.error("Error al enviar el correo:", error);
