@@ -61,7 +61,6 @@ document.getElementById('cantidadPersonalizada').addEventListener('input', funct
 
 // Incluir el SDK de PayPal
 
-// Cargar el SDK de PayPal con componentes de Apple Pay
 paypal.Buttons({
     createOrder: function(data, actions) {
         return actions.order.create({
@@ -90,7 +89,6 @@ paypal.Buttons({
         currencyCode: 'USD', // Moneda en la que se realizará el pago
     }
 }).render('#paypal-button-container'); // Renderizar el botón de PayPal en el contenedor con id 'paypal-button-container'
-
 
 function procesarDonacion() {
 
