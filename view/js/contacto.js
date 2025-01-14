@@ -33,6 +33,10 @@ function enviarContactoForm() {
             icon: 'warning',
             title: 'Campos vacíos',
             text: 'Por favor, completa todos los campos antes de enviar el mensaje.',
+            background: '#343a40',  // Fondo oscuro
+            color: '#f8f9fa',  // Texto claro
+            iconColor: '#ffc107',  // Color del ícono de advertencia (amarillo)
+            confirmButtonColor: '#007bff', // Color del botón (azul)
         });
         botonEnviar.prop("disabled", false);
         botonEnviar.text("Enviar mensaje");
@@ -44,6 +48,10 @@ function enviarContactoForm() {
             icon: 'error',
             title: 'Correo inválido',
             text: 'Introduce un correo electrónico válido.',
+            background: '#343a40',  // Fondo oscuro
+            color: '#f8f9fa',  // Texto claro
+            iconColor: '#dc3545',  // Color del ícono de error (rojo)
+            confirmButtonColor: '#007bff', // Color del botón (azul)
         });
         botonEnviar.prop("disabled", false);
         botonEnviar.text("Enviar mensaje");
@@ -57,41 +65,6 @@ function enviarContactoForm() {
         asunto: asunto,
         mensaje: mensaje,
     };
-
-    // Comentar o eliminar la llamada a PHP si no quieres que se ejecute en GitHub Pages
-    /*
-    fetch('path_to_backend/cInsertContact.php', {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: { 'Content-Type': 'application/json' },
-    })
-    .then((res) => res.json())
-    .then((response) => {
-        if (!response.error) {
-            console.log("Datos guardados en la base de datos:", data);
-            // Enviar el correo con EmailJS
-            enviarEmailJS(data, botonEnviar);
-        } else {
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: 'Hubo un problema al procesar tu mensaje. Intenta nuevamente.',
-            });
-            botonEnviar.prop("disabled", false);
-            botonEnviar.text("Enviar mensaje");
-        }
-    })
-    .catch((error) => {
-        console.error("Error al guardar en la base de datos:", error);
-        Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'No se pudieron guardar los datos. Intenta más tarde.',
-        });
-        botonEnviar.prop("disabled", false);
-        botonEnviar.text("Enviar mensaje");
-    });
-    */
 
     // Ahora solo enviar el correo con EmailJS
     enviarEmailJS(data, botonEnviar);
@@ -113,7 +86,11 @@ function enviarEmailJS(data, botonEnviar) {
         Swal.fire({
             icon: 'success',
             title: '¡Mensaje enviado!',
-            text: 'Tu mensaje fue enviado correctamente.',
+            text: 'Gracias por ponerte en contacto. He recibido tu mensaje y lo revisaré tan pronto como sea posible.',
+            background: '#343a40',  // Fondo oscuro
+            color: '#f8f9fa',  // Texto claro
+            iconColor: '#28a745',  // Color del ícono de éxito (verde)
+            confirmButtonColor: '#007bff', // Color del botón (azul)
         });
         $("#nombreContacto").val("");
         $("#emailContacto").val("");
@@ -129,6 +106,10 @@ function enviarEmailJS(data, botonEnviar) {
             icon: 'error',
             title: 'Error al enviar el correo',
             text: 'Hubo un problema al enviar tu mensaje. Intenta nuevamente.',
+            background: '#343a40',  // Fondo oscuro
+            color: '#f8f9fa',  // Texto claro
+            iconColor: '#dc3545',  // Color del ícono de error (rojo)
+            confirmButtonColor: '#007bff', // Color del botón (azul)
         });
         botonEnviar.prop("disabled", false);
         botonEnviar.text("Enviar mensaje");
