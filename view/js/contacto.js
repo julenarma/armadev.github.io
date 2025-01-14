@@ -58,7 +58,8 @@ function enviarContactoForm() {
         mensaje: mensaje,
     };
 
-    // Guardar en MySQL
+    // Comentar o eliminar la llamada a PHP si no quieres que se ejecute en GitHub Pages
+    /*
     fetch('path_to_backend/cInsertContact.php', {
         method: 'POST',
         body: JSON.stringify(data),
@@ -90,6 +91,10 @@ function enviarContactoForm() {
         botonEnviar.prop("disabled", false);
         botonEnviar.text("Enviar mensaje");
     });
+    */
+
+    // Ahora solo enviar el correo con EmailJS
+    enviarEmailJS(data, botonEnviar);
 }
 
 // Función para enviar el correo con EmailJS
