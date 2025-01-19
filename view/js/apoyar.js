@@ -140,17 +140,13 @@ function cargarDonaciones() {
     // Datos simulados para la vista previa de donaciones
     var donaciones = [
         { nombre: "María López", mensaje: "Juntos podemos más", cantidad: 4 },
-        { nombre: "Pedro Benito", mensaje: "Por un futuro mejor", cantidad: 6 },
+        { nombre: "Pedro Benito", mensaje: "Por un futuro mejor", cantidad: 10 },
         { nombre: "Lucía Martínez", mensaje: "¡A ayudar siempre!", cantidad: 7 },
         { nombre: "Javier Ruiz", mensaje: "Por los que más lo necesitan", cantidad: 3 },
         { nombre: "Laura Fernández", mensaje: "Cada pequeña ayuda cuenta", cantidad: 2 },
         { nombre: "Raúl González", mensaje: "Por un mundo más justo", cantidad: 8 },
-        { nombre: "Carmen Díaz", mensaje: "Siempre apoyando causas nobles", cantidad: 5 },
-        { nombre: "Sergio Ramírez", mensaje: "La solidaridad es nuestro mejor camino", cantidad: 9 },
-        { nombre: "Ana María Pérez", mensaje: "Un granito de arena", cantidad: 1 },
-        { nombre: "David García", mensaje: "Porque todos merecemos un mejor futuro", cantidad: 6 },
-        { nombre: "Clara Fernández", mensaje: "Con amor y esperanza", cantidad: 4 },
-        { nombre: "Andrés Jiménez", mensaje: "Cada gesto cuenta", cantidad: 10 }
+        { nombre: "Carmen Díaz", mensaje: "Siempre apoyando causas nobles", cantidad: 5 }
+        
     ];
 
     var myHtml = "";

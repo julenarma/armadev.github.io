@@ -336,11 +336,7 @@ body.dark-mode textarea:hover {
 
 
 @media only screen and (max-width: 768px) {
-    #navbar {
-
-        background-color: transparent;
-
-    }
+    
 
     /* Navegation Menu */
     .btn-menu {

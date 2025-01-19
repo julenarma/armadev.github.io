@@ -119,12 +119,12 @@ function closeMenu() {
   goTopButton.style.visibility = 'visible';
 
   // Restaurar el navbar
-  navbar.style.backgroundColor = 'transparent';
+ 
+  navbar.style.backgroundColor = 'transparent ';
+  
   updateNavbarAndLogo();
 }
 
-
-// Actualizar el navbar y logo según el modo oscuro
 // Actualizar el navbar y logo según el modo oscuro
 function updateNavbarAndLogo() {
   // Verificar si el navbar está en la parte superior
